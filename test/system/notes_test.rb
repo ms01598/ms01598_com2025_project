@@ -15,6 +15,7 @@ class NotesTest < ApplicationSystemTestCase
     click_on "New Note"
 
     fill_in "Description", with: @note.description
+    fill_in "Song", with: @note.song_id
     click_on "Create Note"
 
     assert_text "Note was successfully created"
@@ -26,6 +27,7 @@ class NotesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Description", with: @note.description
+    fill_in "Song", with: @note.song_id
     click_on "Update Note"
 
     assert_text "Note was successfully updated"

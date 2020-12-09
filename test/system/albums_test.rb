@@ -16,6 +16,7 @@ class AlbumsTest < ApplicationSystemTestCase
 
     fill_in "Number of songs", with: @album.number_of_songs
     fill_in "Release year", with: @album.release_year
+    fill_in "Song", with: @album.song_id
     fill_in "Title", with: @album.title
     click_on "Create Album"
 
@@ -29,6 +30,7 @@ class AlbumsTest < ApplicationSystemTestCase
 
     fill_in "Number of songs", with: @album.number_of_songs
     fill_in "Release year", with: @album.release_year
+    fill_in "Song", with: @album.song_id
     fill_in "Title", with: @album.title
     click_on "Update Album"
 

@@ -10,14 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_09_141631) do
+ActiveRecord::Schema.define(version: 2020_12_09_174749) do
 
   create_table "albums", force: :cascade do |t|
-    t.string "title"
+    t.integer "song_id", null: false
+    t.string "title", null: false
     t.integer "number_of_songs"
     t.integer "release_year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_albums_on_song_id"
   end
 
   create_table "artists", force: :cascade do |t|
@@ -27,9 +29,11 @@ ActiveRecord::Schema.define(version: 2020_12_09_141631) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.text "description"
+    t.integer "song_id", null: false
+    t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_notes_on_song_id"
   end
 
   create_table "songs", force: :cascade do |t|
@@ -40,6 +44,10 @@ ActiveRecord::Schema.define(version: 2020_12_09_141631) do
     t.boolean "favourite"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "artist_id"
+    t.integer "album_id"
+    t.index ["album_id"], name: "index_songs_on_album_id"
+    t.index ["artist_id"], name: "index_songs_on_artist_id"
   end
 
 end

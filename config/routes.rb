@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  resources :albums
   resources :notes
+  resources :albums
   resources :artists
-  root 'songs#index'
   resources :songs
+  root 'songs#index'
   get 'albums', to: 'album#albums'
+  get 'notes', to: 'note#notes'
+  get 'artists', to: 'artist#artists'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
