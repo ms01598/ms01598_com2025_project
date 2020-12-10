@@ -1,0 +1,22 @@
+%nav.navbar.navbar-light{style: "background-color: #FAEBD7;"}
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'Best Music YOUniverse', root_path, class: "navbar-brand"
+    #myNavbar.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.active
+          = link_to 'Songs', songs_path , class: "nav-link"
+        %li
+          = link_to 'Artists', artists_path
+        %li
+          = link_to 'Albums', albums_path
+        %li
+          = link_to 'Notes', notes_path
+
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{href: "#"} Contact Us

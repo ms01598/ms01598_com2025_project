@@ -6,7 +6,8 @@ ruby '2.7.2'
 gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'modernizr-rails'
-gem 'rails-controller-testing' 
+gem 'rails-controller-testing'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -50,7 +51,8 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  #to make errors more better looking
+  gem 'better_errors'
 
 end
 
