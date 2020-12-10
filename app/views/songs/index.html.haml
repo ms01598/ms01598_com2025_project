@@ -3,7 +3,7 @@
 
 %p#notice= notice
 %h1 Songs
-%table
+%table.table.table-hover
   %thead
     %tr
       %th Title
@@ -24,4 +24,4 @@
         %td= link_to 'Edit', edit_song_path(song)
         %td= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-= link_to 'New Song', new_song_path
+= link_to 'Add Song', new_song_path , class: "btn btn-secondary"
