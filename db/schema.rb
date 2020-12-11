@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_10_230927) do
+ActiveRecord::Schema.define(version: 2020_12_11_125745) do
 
   create_table "albums", force: :cascade do |t|
-    t.integer "song_id", null: false
     t.string "title", null: false
     t.integer "number_of_songs"
     t.integer "release_year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["song_id"], name: "index_albums_on_song_id"
+    t.integer "songs_id"
+    t.index ["songs_id"], name: "index_albums_on_songs_id"
   end
 
   create_table "artists", force: :cascade do |t|
@@ -40,8 +40,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_230927) do
 
   create_table "songs", force: :cascade do |t|
     t.string "title"
-    t.string "artist"
-    t.string "album"
     t.float "duration"
     t.boolean "favourite"
     t.datetime "created_at", null: false

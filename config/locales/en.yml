@@ -37,3 +37,22 @@ en:
     index:
       title: Best Music YOUniverse
       welcome: Find here a collection of everyone's favourite music!
+
+  contact:
+    contact:
+      title: Contact Us
+      contact_us: Please complete the following form to get in touch with us! :)
+
+      name: "Name:"
+      enter_name: Enter your name.
+      email: "Email:"
+      enter_email: Enter your email address.
+      phone: "Phone number:"
+      enter_phone: Enter your phone number.
+      message: "Message:"
+      enter_message: Write your message here.
+      submit: Contact Us
+
+    request_contact:
+      no_email: Oops! Please supply an email address.
+      email_sent: Thank you! We will be in touch with you shortly!
