@@ -3,7 +3,6 @@
 %table
   %thead
     %tr
-      %th Song
       %th Title
       %th Number of songs
       %th Release year
@@ -14,7 +13,6 @@
   %tbody
     - @albums.each do |album|
       %tr
-        %td= album.song
         %td= album.title
         %td= album.number_of_songs
         %td= album.release_year

@@ -7,6 +7,7 @@
       %ul
         - song.errors.full_messages.each do |message|
           %li= message
+
   .field.form-group
     /= form.label :title
     = form.text_field :title , class:"form-control", placeholder: "Title"
@@ -16,5 +17,11 @@
   .field.form-group
     = form.label :favourite
     = form.check_box :favourite , class:"form-control"
+  .field.form-group
+    = form.label :artist_id
+    = form.collection_select :artist_id , Artist.order(:name),:id,:name, prompt: true
+  .field.form-group
+    = form.label :album_id
+    = form.collection_select :album_id , Album.order(:title),:id,:title, prompt: true
   .actions
     = form.submit class:"btn btn-secondary"

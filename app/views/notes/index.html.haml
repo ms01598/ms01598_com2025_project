@@ -12,7 +12,7 @@
   %tbody
     - @notes.each do |note|
       %tr
-        %td= note.song
+        %td= note.song.title
         %td= note.description
         %td= link_to 'Show', note
         %td= link_to 'Edit', edit_note_path(note)

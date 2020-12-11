@@ -6,9 +6,8 @@
         - @note.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :song
-    = f.text_field :song
+  .field.form-group
+    = f.collection_select :song_id , Song.order(:title),:id,:title, prompt: true
   .field
     = f.label :description
     = f.text_area :description
