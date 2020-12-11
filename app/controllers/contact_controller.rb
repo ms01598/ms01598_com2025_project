@@ -11,7 +11,7 @@ class ContactController < ApplicationController
     if email.blank?
       flash[:alert] = I18n.t('contact.request_get_in_contact.no_email')
     else
-      #send email
+      ContactMailer.contact_email(email, name, phone, message).deliver_now
       flash[:notice] = I18n.t('contact.request_get_in_contact.email_sent')
     end
 

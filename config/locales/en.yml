@@ -53,6 +53,6 @@ en:
       enter_message: Write your message here.
       submit: Contact Us
 
-    request_contact:
+    request_get_in_contact:
       no_email: Oops! Please supply an email address.
       email_sent: Thank you! We will be in touch with you shortly!
