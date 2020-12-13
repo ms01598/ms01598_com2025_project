@@ -1,15 +1,13 @@
-%nav.navbar.navbar-light{style: "background-color: #FAEBD7;"}
+%nav.navbar.navbar-inverse.navbar-custom
   .container-fluid
     .navbar-header
       %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", type:"button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      = link_to 'Best Music YOUniverse', root_path, class: "navbar-brand"
+        %span.fas.fa-bars.fa-lg
+      = link_to 'B.M.YOU', root_path, class: "navbar-brand"
     #myNavbar.collapse.navbar-collapse
       %ul.nav.navbar-nav
-        %li.active
-          = link_to 'Songs', songs_path , class: "nav-link"
+        %li
+          = link_to 'Songs', songs_path
         %li
           = link_to 'Artists', artists_path
         %li

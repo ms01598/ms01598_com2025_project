@@ -38,6 +38,17 @@ en:
       title: Best Music YOUniverse
       welcome: Find here a collection of everyone's favourite music!
 
+      step1: Step 1
+      step2: Step 2
+      step3: Step 3
+      step4: Step 4
+      instruction1: add an arist.
+      instruction2: add an artist's album.
+      instruction3: add one or more songs.
+      instruction4: optionallly, you can add a note for your song.
+
+      instruction5: Use the pages from the navigation bar above!
+
     contact:
       title: Contact Us
       contact_us: Please complete the following form to get in touch with us! :)

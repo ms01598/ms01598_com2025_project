@@ -1,0 +1,55 @@
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-style: none;
+  margin-bottom: 0;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.navbar-nav li a:hover {
+  color: #DDA0DD !important;
+}
+
+.navbar-custom {
+  background-color: #FAEBD7;
+  color: pink;
+  border-style: none;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #FAEBD7;
+}
+
+.footer {
+  letter-spacing: 1px;
+  padding-top: 10px;
+  text-align: center;
+  background-color: #FAEBD7;
+  flex-shrink: 0;
+}
+
+.navbar-brand {
+  text-shadow: 2px 2px 5px grey;
+}
+
+.jumbotron{
+  text-align: center;
+  background-color: #FFF5EE;
+  margin-bottom: 0px;
+  flex: 1 0 auto;
+}
+
+.p-3 {
+  padding-bottom: 30px;
+}
+.p-5 {
+  padding-top: 50px;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;

@@ -1,2 +1,34 @@
-%h1= t('.title')
-%p= t('.welcome')
+.jumbotron
+  %h1=t('.title')
+  %h2= t('.welcome')
+
+  .container-fluid.bg-3.text-center
+    .row.p-3.p-5
+      %h3 How to use:
+
+
+    .row
+      .col-sm-3
+        %p=t('.step1')
+        %p=t('.instruction1')
+        /%img.img-responsive{alt: "Image", src: "https://placehold.it/150x80?text=IMAGE", style: "width:100%"}/
+      .col-sm-3
+        %p=t('.step2')
+        %p=t('.instruction2')
+        /%img.img-responsive{alt: "Image", src: "https://placehold.it/150x80?text=IMAGE", style: "width:100%"}/
+      .col-sm-3
+        %p=t('.step3')
+        %p=t('.instruction3')
+        /%img.img-responsive{alt: "Image", src: "https://placehold.it/150x80?text=IMAGE", style: "width:100%"}/
+      .col-sm-3
+        %p=t('.step4')
+        %p=t('.instruction4')
+
+    %br
+
+    .container-fluid.bg-3.text-center
+      .row.p-5
+        %p=t('.instruction5')
+
+    %br
+    %br
