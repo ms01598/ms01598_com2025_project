@@ -8,7 +8,7 @@
 
   .field.form-group
     = f.collection_select :song_id , Song.order(:title),:id,:title, prompt: true
-  .field
+  .field.form-group
     = f.label :description
     = f.text_area :description
   .actions

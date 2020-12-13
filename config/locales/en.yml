@@ -33,12 +33,11 @@ en:
   app_title: My Music Collection
   app_description: Best music YOUniverse!
 
-  songs:
-    index:
+  home:
+    home:
       title: Best Music YOUniverse
       welcome: Find here a collection of everyone's favourite music!
 
-  contact:
     contact:
       title: Contact Us
       contact_us: Please complete the following form to get in touch with us! :)

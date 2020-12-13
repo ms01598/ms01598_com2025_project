@@ -15,8 +15,8 @@
     /= form.label :duration
     = form.text_field :duration , class:"form-control", placeholder: "Duration"
   .field.form-group
-    = form.label :favourite
-    = form.check_box :favourite , class:"form-control"
+    = form.label :favourite, "Favourite?"
+    = form.check_box :favourite
   .field.form-group
     = form.label :artist_id
     = form.collection_select :artist_id , Artist.order(:name),:id,:name, prompt: true
@@ -24,4 +24,5 @@
     = form.label :album_id
     = form.collection_select :album_id , Album.order(:title),:id,:title, prompt: true
   .actions
-    = form.submit class:"btn btn-secondary"
+    /%button.btn.btn-secondary{type: "submit"} Add Song
+    = form.submit "Add Song", class: "btn btn-secondary"
