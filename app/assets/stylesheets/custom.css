@@ -47,6 +47,21 @@
   padding-top: 50px;
 }
 
+.container{
+  width:100%;
+  background-color: #FFF5EE;
+
+}
+
+.btn-default {
+  background-color: #FFE4E1;
+}
+
+th {
+  text-align: center;
+
+}
+
 html, body {
   height: 100%;
 }

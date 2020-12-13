@@ -1,25 +1,26 @@
-%h1 Listing albums
+.container.text-center.p-3
+  %h1 Albums
 
-%table
-  %thead
-    %tr
+
+.jumbotron
+  %table.table.table-hover.table-responsive
+    %thead
+      %tr
       %th Title
       %th Number of songs
       %th Release year
-      %th
-      %th
-      %th
+      %th{colspan: "3"}
 
-  %tbody
-    - @albums.each do |album|
-      %tr
-        %td= album.title
-        %td= album.number_of_songs
-        %td= album.release_year
-        %td= link_to 'Show', album
-        %td= link_to 'Edit', edit_album_path(album)
-        %td= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }
+    %tbody
+      - @albums.each do |album|
+        %tr
+          %td= album.title
+          %td= album.number_of_songs
+          %td= album.release_year
+          %td= link_to 'Show', album
+          %td= link_to 'Edit', edit_album_path(album)
+          %td= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }
 
-%br
-
-= link_to 'New Album', new_album_path
+  %br/
+  .row.btn.btn-default
+    = link_to 'Add Album', new_album_path

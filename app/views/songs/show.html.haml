@@ -1,19 +1,22 @@
-%p#notice= notice
-%p
-  %strong Title:
-  = @song.title
-%p
-  %strong Artist:
-  = @song.artist.name
-%p
-  %strong Album:
-  = @song.album.title
-%p
-  %strong Duration:
-  = @song.duration
-%p
-  %strong Favourite:
-  = @song.favourite
-= link_to 'Edit', edit_song_path(@song)
-|
-= link_to 'Back', songs_path
+.jumbotron
+  %p#notice= notice
+  %p
+    %strong Title:
+    = @song.title
+  %p
+    %strong Artist:
+    = @song.artist.name
+  %p
+    %strong Album:
+    = @song.album.title
+  %p
+    %strong Duration:
+    = @song.duration
+  %p
+    %strong Favourite:
+    = @song.favourite
+
+  .row.btn.btn-default
+    = link_to 'Edit', edit_song_path(@song)
+    |
+    = link_to 'Back', songs_path

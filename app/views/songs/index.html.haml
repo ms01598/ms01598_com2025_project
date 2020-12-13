@@ -1,25 +1,33 @@
+.container.text-center.p-3
+  %h1 Songs
 
-%p#notice= notice
-%h1 Songs
-%table.table.table-hover
-  %thead
-    %tr
-      %th Title
-      %th Artist
-      %th Album
-      %th Duration
-      %th Favourite
-      %th{colspan: "3"}
-  %tbody
-    - @songs.each do |song|
+
+.jumbotron
+  %table.table.table-hover.table-responsive
+    %thead
       %tr
-        %td= song.title
-        %td= song.artist.name
-        %td= song.album.title
-        %td= song.duration
-        %td= song.favourite
-        %td= link_to 'Show', song
-        %td= link_to 'Edit', edit_song_path(song)
-        %td= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'Add Song', new_song_path , class: "btn btn-secondary"
+        %th Title
+        %th Artist
+        %th Album
+        %th Duration
+        %th Favourite
+        %th{colspan: "3"}
+
+    %tbody
+      - @songs.each do |song|
+        %tr
+          %td= song.title
+          %td= song.artist.name
+          %td= song.album.title
+          %td= song.duration
+          - if song.favourite == true
+            %td.fa.fa-check
+          - else
+            %td
+          %td= link_to 'Show', song
+          %td= link_to 'Edit', edit_song_path(song)
+          %td= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }
+
+  %br/
+  .row.btn.btn-default
+    = link_to 'Add Song', new_song_path

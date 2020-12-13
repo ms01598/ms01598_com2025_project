@@ -1,12 +1,14 @@
-%p#notice= notice
+.jumbotron
+  %p#notice= notice
 
-%p
-  %b Song:
-  = @note.song.title
-%p
-  %b Description:
-  = @note.description
+  %p
+    %b Song:
+    = @note.song.title
+  %p
+    %b Description:
+    = @note.description
 
-= link_to 'Edit', edit_note_path(@note)
-\|
-= link_to 'Back', notes_path
+  .row.btn.btn-default
+    = link_to 'Edit', edit_note_path(@note)
+    |
+    = link_to 'Back', notes_path

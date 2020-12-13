@@ -1,16 +1,17 @@
-%p#notice= notice
+.jumbotron
+  %p#notice= notice
 
 
-%p
-  %b Title:
-  = @album.title
-%p
-  %b Number of songs:
-  = @album.number_of_songs
-%p
-  %b Release year:
-  = @album.release_year
-
-= link_to 'Edit', edit_album_path(@album)
-\|
-= link_to 'Back', albums_path
+  %p
+    %b Title:
+    = @album.title
+  %p
+    %b Number of songs:
+    = @album.number_of_songs
+  %p
+    %b Release year:
+    = @album.release_year
+  .row.btn.btn-default
+    = link_to 'Edit', edit_album_path(@album)
+    |
+    = link_to 'Back', albums_path

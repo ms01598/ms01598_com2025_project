@@ -1,0 +1,6 @@
+.container.text-center.p-3
+  %h1 New Song
+.jumbotron
+  = render 'form', song: @song
+  .row.btn.btn-default
+    = link_to 'Back', songs_path

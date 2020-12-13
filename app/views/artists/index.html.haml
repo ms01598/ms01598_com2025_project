@@ -1,21 +1,21 @@
-%h1 Listing artists
+.container.text-center.p-3
+  %h1 Artists
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th
-      %th
-      %th
 
-  %tbody
-    - @artists.each do |artist|
+.jumbotron
+  %table.table.table-hover.table-responsive
+    %thead
       %tr
-        %td= artist.name
-        %td= link_to 'Show', artist
-        %td= link_to 'Edit', edit_artist_path(artist)
-        %td= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' }
+        %th Name
+        %th{colspan: "2"}
 
-%br
+    %tbody
+      - @artists.each do |artist|
+        %tr
+          %td= artist.name
+          %td= link_to 'Edit', edit_artist_path(artist)
+          %td= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'New Artist', new_artist_path
+  %br/
+  .row.btn.btn-default
+    = link_to 'Add Artist', new_artist_path

@@ -1,9 +1,9 @@
-%p#notice= notice
+.jumbotron
+  %p#notice= notice
 
-%p
-  %b Name:
-  = @artist.name
+  %p
+    %b Name:
+    = @artist.name
 
-= link_to 'Edit', edit_artist_path(@artist)
-\|
-= link_to 'Back', artists_path
+  .row.btn.btn-default
+    = link_to 'Back', artists_path
