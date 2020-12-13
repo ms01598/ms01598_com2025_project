@@ -1,0 +1,19 @@
+%p#notice= notice
+%h1 Favourites
+%table.table.table-hover
+  %thead
+    %tr
+      %th Title
+      %th Artist
+      %th Album
+      %th Duration
+      %th Favourite
+      %th{colspan: "3"}
+  %tbody
+    - @favs.each do |s|
+      %tr
+        %td= s.title
+        %td= s.artist.name
+        %td= s.album.title
+        %td= s.duration
+        %td= s.favourite

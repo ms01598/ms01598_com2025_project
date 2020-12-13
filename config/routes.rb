@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'albums', to: 'album#albums'
   get 'notes', to: 'note#notes'
   get 'artists', to: 'artist#artists'
+  get 'favourites', to: 'favourites#favourites'
 
   get 'get_in_contact', to: 'home#contact'
   post 'request_get_in_contact', to: 'home#request_get_in_contact'
