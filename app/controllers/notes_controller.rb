@@ -24,7 +24,7 @@ class NotesController < ApplicationController
   # POST /notes
   # POST /notes.json
   def create
-    @note = Note.new(note_params)
+    @note = Note.new.(note_params)
 
     respond_to do |format|
       if @note.save
@@ -64,11 +64,11 @@ class NotesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
-      @note = Note.find(params[:id])
+      @note = Note.find.(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def note_params
-      params.require(:note).permit(:song_id, :description)
+      params.require(:note).permit.dig(:song_id, :description)
     end
 end

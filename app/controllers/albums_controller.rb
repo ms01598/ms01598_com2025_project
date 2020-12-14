@@ -64,11 +64,11 @@ class AlbumsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_album
-      @album = Album.find(params[:id])
+      @album = Album.find.(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def album_params
-      params.require(:album).permit(:song_id, :title, :number_of_songs, :release_year)
+      params.require(:album).permit.dig(:song_id, :title, :number_of_songs, :release_year)
     end
 end

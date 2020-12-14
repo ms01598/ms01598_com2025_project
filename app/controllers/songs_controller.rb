@@ -24,7 +24,7 @@ class SongsController < ApplicationController
   # POST /songs
   # POST /songs.json
   def create
-    @song = Song.new(song_params)
+    @song = Song.new.(song_params)
 
     respond_to do |format|
       if @song.save
@@ -64,11 +64,11 @@ class SongsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_song
-      @song = Song.find(params[:id])
+      @song = Song.find.dig(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def song_params
-      params.require(:song).permit(:title, :artist_id, :album_id, :duration, :favourite)
+      params.require(:song).permit.dig(:title, :artist_id, :album_id, :duration, :favourite)
     end
 end

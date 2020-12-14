@@ -1,5 +1,8 @@
+
 %h1=t('.title')
 %p=t('.contact_us')
+
+
 
 = form_tag request_get_in_contact_path, method: 'post' do
   = label_tag :name, t('.name')
