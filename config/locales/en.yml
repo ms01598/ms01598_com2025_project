@@ -50,6 +50,8 @@ en:
       instruction5: Use the pages from the navigation bar above!
       instruction6: You can also view your favourite songs!:)
 
+      warning: Warning! Please 'destroy' in the same order you created the data (artist->album->song->note)
+
     contact:
       title: Contact Us
       contact_us: Please complete the following form to get in touch with us! :)

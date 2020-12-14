@@ -17,10 +17,10 @@ class ArtistsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create artist" do
     assert_difference('Artist.count') do
-      post artists_url, params: { artist: { name: @artist.name } }
+      post :create, artist: { name: @artist.name }
     end
 
-    assert_redirected_to artist_url(Artist.last)
+    assert_redirected_to artist_path(assigns(:artist))
   end
 
   test "should show artist" do
