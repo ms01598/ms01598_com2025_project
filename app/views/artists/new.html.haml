@@ -1,5 +1,8 @@
-%h1 New artist
 
-= render 'form'
 
-= link_to 'Back', artists_path
+.container.text-center.p-3
+  %h1 New artist
+.jumbotron
+  = render 'form'
+  .row.btn.btn-default
+    = link_to 'Back', artists_path

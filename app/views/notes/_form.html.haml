@@ -6,10 +6,13 @@
         - @note.errors.full_messages.each do |message|
           %li= message
 
-  .field.form-group
-    = f.collection_select :song_id , Song.order(:title),:id,:title, prompt: true
-  .field.form-group
-    = f.label :description
-    = f.text_area :description
-  .actions
-    = f.submit 'Save'
+  .container-fluid
+    .row.form-row
+      .col-4
+      .field.form-group.col-4
+        = f.collection_select :song_id , Song.order(:title),:id,:title, prompt: true
+        = f.text_area :description, class:"form-control", placeholder: "Description"
+      .col-4
+
+    .actions.btn
+      = f.submit "Add Note"

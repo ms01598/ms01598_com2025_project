@@ -1,5 +1,7 @@
-%h1 New album
 
-= render 'form'
-
-= link_to 'Back', albums_path
+.container.text-center.p-3
+  %h1 New album
+.jumbotron
+  = render 'form'
+  .row.btn.btn-default
+    = link_to 'Back', albums_path

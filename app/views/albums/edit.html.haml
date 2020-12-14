@@ -1,7 +1,8 @@
-%h1 Editing album
-
-= render 'form'
-
-= link_to 'Show', @album
-\|
-= link_to 'Back', albums_path
+.container.text-center.p-3
+  %h1 Editing Album
+.jumbotron
+  = render 'form'
+  .row.btn.btn-default
+    = link_to 'Show', @album
+    |
+    = link_to 'Back', albums_path

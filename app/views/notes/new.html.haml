@@ -1,5 +1,7 @@
-%h1 New note
 
-= render 'form'
-
-= link_to 'Back', notes_path
+.container.text-center.p-3
+  %h1 New Note
+.jumbotron
+  = render 'form'
+  .row.btn.btn-default
+    = link_to 'Back', notes_path

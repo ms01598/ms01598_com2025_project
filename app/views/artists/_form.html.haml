@@ -6,8 +6,12 @@
         - @artist.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .actions
-    = f.submit 'Save'
+  .container-fluid
+    .row.form-row
+      .col-4
+      .field.form-group.col-4
+        = f.text_field :name,  class:"form-control", placeholder: "Name"
+      .col-4
+
+  .actions.btn
+    = f.submit "Add Artist"

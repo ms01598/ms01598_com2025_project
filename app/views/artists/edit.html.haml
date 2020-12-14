@@ -1,7 +1,9 @@
-%h1 Editing artist
 
-= render 'form'
-
-= link_to 'Show', @artist
-\|
-= link_to 'Back', artists_path
+.container.text-center.p-3
+  %h1 Editing artist
+.jumbotron
+  = render 'form'
+  .row.btn.btn-default
+    = link_to 'Show', @artist
+    |
+    = link_to 'Back', artists_path

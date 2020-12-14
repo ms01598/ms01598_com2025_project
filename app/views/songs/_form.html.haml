@@ -7,22 +7,24 @@
       %ul
         - song.errors.full_messages.each do |message|
           %li= message
+  .container-fluid
+    .row.form-row
+      .col-4
+      .field.form-group.col-4
+        = form.text_field :title , class:"form-control", placeholder: "Title"
+        = form.text_field :duration , class:"form-control", placeholder: "Duration"
+        = form.label :artist_id
+        = form.collection_select :artist_id , Artist.order(:name),:id,:name, prompt: true
+        = form.label :album_id
+        = form.collection_select :album_id , Album.order(:title),:id,:title, prompt: true
+        = form.label :favourite, "Favourite?"
+      .col-4
+    .row.form-row
+      .col-5
+      .col-2.checkbox-align
+        = form.check_box :favourite
+      .col-5
 
-  .field.form-group
-    /= form.label :title
-    = form.text_field :title , class:"form-control", placeholder: "Title"
-  .field.form-group
-    /= form.label :duration
-    = form.text_field :duration , class:"form-control", placeholder: "Duration"
-  .field.form-group
-    = form.label :favourite, "Favourite?"
-    = form.check_box :favourite
-  .field.form-group
-    = form.label :artist_id
-    = form.collection_select :artist_id , Artist.order(:name),:id,:name, prompt: true
-  .field.form-group
-    = form.label :album_id
-    = form.collection_select :album_id , Album.order(:title),:id,:title, prompt: true
-  .actions
-    /%button.btn.btn-secondary{type: "submit"} Add Song
-    = form.submit "Add Song", class: "btn btn-secondary"
+
+    .actions.btn
+      = form.submit "Add Song"

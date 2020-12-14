@@ -50,16 +50,20 @@
 .container{
   width:100%;
   background-color: #FFF5EE;
-
 }
 
 .btn-default {
   background-color: #FFE4E1;
 }
 
+.checkbox-align {
+  margin-left: 49%;
+  margin-right: 49%;
+  margin-bottom: 20px;
+}
+
 th {
   text-align: center;
-
 }
 
 html, body {
@@ -68,3 +72,9 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+}
+
+.form-row {
+  margin-left: 35%;
+  margin-right: 35%;
+}
